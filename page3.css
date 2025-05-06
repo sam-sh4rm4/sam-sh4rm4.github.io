@@ -1,0 +1,216 @@
+body {  /* Base styles for the page */
+  background-color: rgb(0, 0, 0);  /* Set background to black */
+  color: white;  /* Set text color to white */
+  margin: 0;  /* Remove default margin */
+  font-family: Arial, sans-serif;  /* Set font family */
+}
+
+header {  /* Styles for the header section */
+  background-color: rgb(0, 0, 0);  /* Set header background to black */
+  padding: 0;  /* Remove padding */
+  text-align: center;  /* Center the text */
+  position: static;  /* Use default position */
+  width: 100%;  /* Make header full width */
+}
+
+h1 {  /* Style for all h1 headers */
+  color: rgb(244, 126, 0);  /* Set text color to orange */
+  margin: 10px 0;  /* Vertical spacing above and below the header */
+}
+
+.button-container {  /* Container holding navigation buttons */
+  display: flex;  /* Use flexbox for layout */
+  justify-content: center;  /* Center buttons horizontally */
+  gap: 10px;  /* Space between buttons */
+  margin: 10px 0;  /* Vertical margin */
+}
+
+.button-container a {  /* Style for anchor tags inside button container */
+  text-decoration: none;  /* Remove underline from links */
+}
+
+.button-container button {  /* Style for buttons */
+  background-color: black;  /* Set background to black */
+  color: white;  /* Set text color to white */
+  padding: 10px 20px;  /* Padding inside the button */
+  border: 2px solid orange;  /* Orange border */
+  border-radius: 5px;  /* Rounded corners */
+  cursor: pointer;  /* Show pointer on hover */
+  font-size: 16px;  /* Font size */
+  font-weight: bold;  /* Make text bold */
+}
+
+.button-container button:hover {  /* Style on hover */
+  background-color: orange;  /* Change background to orange */
+  color: black;  /* Change text color to black */
+}
+
+.header-line {  /* White line under header */
+  width: 100%;  /* Full width */
+  height: 5px;  /* Thickness of the line */
+  background-color: white;  /* White color */
+  margin: 15px 0;  /* Vertical spacing */
+}
+
+#background-video,  /* Background video styling */
+.image-scroll {  /* Image scroll section uses same styling */
+  width: 1270px;  /* Set width */
+  height: 450px;  /* Set height */
+  border-radius: 10px;  /* Rounded corners */
+  object-fit: cover;  /* Cover element without distortion */
+  display: block;  /* Display as block element */
+  margin: 0 auto;  /* Center horizontally */
+}
+
+.image-container {  /* Container for top center image */
+  position: absolute;  /* Position relative to nearest positioned ancestor */
+  top: 130px;  /* Distance from top */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);  /* Perfect horizontal centering */
+  z-index: 2;  /* Layer above other content */
+}
+
+.image-container img {  /* Image styling inside container */
+  width: 200px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.among-us-container {  /* Among Us section positioning */
+  position: absolute;  /* Absolute positioning */
+  top: 350px;  /* Distance from top */
+  left: 61%;  /* Position from the left side */
+  transform: translateX(-50%);  /* Center based on element's width */
+  z-index: 2;  /* Layer on top */
+}
+
+.among-us-container img {  /* Image in Among Us container */
+  width: 200px;  /* Fixed width */
+  margin-left: 2%;  /* Small left margin */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.among-us-container p {  /* Text below Among Us image */
+  text-align: center;  /* Center text */
+  color: white;  /* White text */
+  margin-top: 10px;  /* Space above paragraph */
+  font-size: 16px;  /* Font size */
+  margin-right: 50%;  /* Push text leftward */
+}
+
+.image-scroll {  /* Scrollable image background section */
+  background-image: url('About Website .png');  /* Background image */
+  background-size: cover;  /* Fully cover container */
+  background-position: center;  /* Center image */
+  padding: 50px 0;  /* Vertical padding */
+  text-align: center;  /* Center content */
+}
+
+.among-us-video {  /* Among Us video styling */
+  display: block;  /* Block element */
+  margin: 0 auto;  /* Center horizontally */
+  width: 500px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+  margin-top: 70px;  /* Space above video */
+}
+
+.roblox-overlay {  /* Roblox overlay section */
+  position: absolute;  /* Positioned relative to page */
+  top: 130px;  /* Distance from top */
+  right: 80%;  /* Push to left */
+  z-index: 3;  /* Appear above most elements */
+  text-align: center;  /* Center text */
+}
+
+.roblox-overlay img {  /* Roblox image styling */
+  width: 200px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.roblox-overlay p {  /* Roblox description text */
+  color: white;  /* White text */
+  font-size: 16px;  /* Font size */
+  margin-top: 10px;  /* Top spacing */
+}
+
+.roblox-video {  /* Roblox video styles */
+  width: 450px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+  display: block;  /* Display as block element */
+  margin-right: -400px;  /* Pull video to left */
+  margin-top: 80px;  /* Space above video */
+}
+
+.fortnite-overlay {  /* Fortnite overlay section */
+  position: absolute;  /* Absolute positioning */
+  top: 130px;  /* Distance from top */
+  left: 80%;  /* Push to the right */
+  z-index: 3;  /* Appear above background */
+  text-align: center;  /* Center text */
+}
+
+.fortnite-overlay img {  /* Fortnite image styling */
+  width: 200px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.fortnite-overlay p {  /* Fortnite paragraph */
+  color: white;  /* White text */
+  font-size: 16px;  /* Font size */
+  margin-top: 10px;  /* Margin above text */
+}
+
+.fortnite-video {  /* Fortnite video styles */
+  width: 400px;  /* Width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+  display: block;  /* Block display */
+  margin-left: -200px;  /* Move to left */
+}
+
+.cod-overlay {  /* Call of Duty overlay section */
+  position: absolute;  /* Absolute position on page */
+  top: 160%;  /* Position lower on page */
+  margin-right: 950px;  /* Pull toward left */
+  transform: translateY(-50%);  /* Adjust vertical alignment */
+  text-align: left;  /* Align text to the left */
+}
+
+.cod-overlay img {  /* COD image styling */
+  width: 300px;  /* Width of image */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+  display: block;  /* Display as block */
+}
+
+.cod-overlay p {  /* COD description */
+  color: rgb(255, 255, 255);  /* White text */
+  font-size: 15px;  /* Font size */
+  margin-top: 10px;  /* Top spacing */
+}
+
+.fall-guys-overlay {  /* Fall Guys overlay section */
+  position: absolute;  /* Absolute position */
+  top: 158%;  /* Place vertically */
+  margin-left: 950px;  /* Push to right side */
+  transform: translateY(-50%);  /* Vertically center */
+  text-align: right;  /* Align text to the right */
+}
+
+.fall-guys-overlay img {  /* Fall Guys image styles */
+  width: 300px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;  /* Rounded corners */
+  display: block;  /* Display block */
+}
+
+.fall-guys-overlay p {  /* Fall Guys text paragraph */
+  color: rgb(255, 255, 255);  /* White text */
+  font-size: 15px;  /* Font size */
+  margin-top: 10px;  /* Margin above paragraph */
+}

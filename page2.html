@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Declares the document as an HTML5 document -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+
+<head>
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design settings -->
+  <title>News</title> <!-- Title shown in browser tab -->
+  <link rel="stylesheet" href="main.css" /> <!-- Links external CSS file -->
+</head>
+
+<body class="page2"> <!-- Body element with class for page-specific styles -->
+
+  <header> <!-- Header section starts -->
+    <div class="nav-buttons"> <!-- Container for navigation buttons -->
+      <button onclick="window.location.href='index.html'">Home</button> <!-- Redirects to Home page -->
+      <button onclick="window.location.href='page3.html'">Information</button> <!-- Redirects to Information page -->
+      <button onclick="window.location.href='page4.html'">History</button> <!-- Redirects to History page -->
+    </div>
+    <h1>News</h1> <!-- Page title -->
+    <img src="1.png" alt="Logo" class="header-image" /> <!-- Logo image -->
+  </header>
+
+  <div class="header-line"></div> <!-- Decorative horizontal line -->
+
+  <div class="video-container"> <!-- Container for video and overlay content -->
+    <video autoplay muted loop id="bg-video"> <!-- Video that auto-plays, loops, and is muted -->
+      <source src="New Video.mp4" type="video/mp4" /> <!-- MP4 video source -->
+      Your browser does not support the video tag. <!-- Fallback text for unsupported browsers -->
+    </video>
+
+    <div class="overlay-content"> <!-- Container for content overlaid on video -->
+
+      <div class="minecraft-container"> <!-- Container for Minecraft news section -->
+        <img src="Minecraft News.png" alt="Minecraft News Image" class="minecraft-image" /> <!-- Minecraft image -->
+        <div class="text-box minecraft-text"> <!-- Text box with specific Minecraft styles -->
+          <p> <!-- Paragraph containing Minecraft update information -->
+            The Minecraft "Spring to Life" update, released on March 25, 2025, introduces a wave of nature-themed content aimed at enhancing the Overworld's vibrancy and immersion. This update features biome-adapted mobs, such as chickens, cows, and pigs with cold, temperate, and warm variants, alongside wolves with unique sound personalities. Players can explore enriched decorative flora, including wildflowers, firefly bushes, and leaf litter, as well as enjoy improved ambient sounds and visual mechanics. Additionally, new items like colored eggs and redesigned spawn eggs add creative possibilities. It's a celebration of exploration and creativity in Minecraft!
+          </p>
+        </div>
+      </div>
+
+      <div class="fortnite-container"> <!-- Container for Fortnite news section -->
+        <img src="Fortnite New Update .png" alt="Fortnite New Update Image" class="fortnite-image" /> <!-- Fortnite image -->
+        <div class="text-box fortnite-text"> <!-- Text box with specific Fortnite styles -->
+          <p> <!-- Paragraph containing Fortnite update information -->
+            Fortnite Chapter 6 Season 3, titled "Galactic Battle", is set to release on May 2, 2025, with a thrilling Star Wars theme taking the center stage. This season promises iconic elements from the Star Wars universe, including locations inspired by famous settings, like the Death Star and Tatooine, and gameplay features like lightsabers and Force powers. Players will also have the ability to pilot X-Wings and TIE Fighters, adding an exciting new dimension to the experience. With beloved characters such as Emperor Palpatine and General Grievous making appearances, the season is set to immerse players in an epic galactic adventure.
+          </p>
+        </div>
+      </div>
+
+      <img src="GTA6.png" alt="GTA 6 Image" class="overlay-image" /> <!-- GTA 6 image displayed over video -->
+
+      <div class="text-box"> <!-- Text box for GTA 6 content -->
+        <p> <!-- Paragraph containing GTA 6 update information -->
+          Grand Theft Auto 6, set to release in Fall 2025, has gamers worldwide brimming with anticipation. Rockstar Games is bringing back the iconic Vice City, showcasing its vibrant neon-lit streets and rich atmosphere that made it legendary. The game is rumored to include a sprawling open world, immersive narratives, and innovative gameplay mechanics that could redefine the series. Fans are eagerly awaiting this highly anticipated addition to one of gaming's most beloved franchises.
+        </p>
+      </div>
+
+    </div> <!-- End of overlay content -->
+  </div> <!-- End of video container -->
+
+</body>
+</html> <!-- End of HTML document -->

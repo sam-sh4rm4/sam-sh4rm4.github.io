@@ -1,462 +1,502 @@
-
 /* Sets default background and text color for the entire page */
 body {
-  background-color: black; /* Black background */
-  color: white; /* White text */
+  background-color: black; /* Sets the background color to black */
+  color: white; /* Sets default text color to white */
 }
 
 /* Styles for all h1 headings */
 h1 {
-  text-align: center; /* Centers the heading text */
+  position: absolute; /* Positions the heading absolutely */
+  top: 5%; /* Places h1 above the header */
+  left: 50%; /* Moves the heading to the center */
+  transform: translateX(-50%); /* Ensures perfect centering */
+  text-align: center; /* Centers the text inside the heading */
+  font-size: 36px; /* Defines font size */
+  font-weight: bold; /* Makes the heading bold */
+}
+
+/* Container to center all buttons directly under the heading */
+.button-container {
+  position: absolute; /* Allows independent placement */
+  top: 12%; /* Places buttons right below h1 */
+  left: 50%; /* Centers container */
+  transform: translateX(-50%); /* Ensures exact centering */
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks buttons vertically */
+  gap: 10px; /* Adds spacing between buttons */
+  align-items: center; /* Centers items */
 }
 
 /* Header section at the top of the page */
 header {
-  background-color: #000000; /* Black background for the header */
-  padding: 30px; /* Space inside the header */
-  text-align: center; /* Center-aligns the text and content */
-  font-size: 35px; /* Increases font size */
-  color: rgb(212, 114, 22); /* Orange text color */
-  align-items: center; /* Aligns content vertically (used with flex, but here it's inert) */
-  justify-content: space-between; /* Spaces elements evenly (also inert unless flex is applied) */
-  border-bottom: 4px solid #ffffff; /* White border below the header */
+  padding: 10px; /* Adds padding inside the header */
+  text-align: center; /* Centers header content */
+  font-size: 20px; /* Sets font size */
+  color: rgb(255, 255, 255); /* Defines text color */
+  display: flex; /* Uses flexbox */
+  align-items: center; /* Aligns content vertically */
+  justify-content: space-between; /* Evenly spaces elements */
+  border-bottom: 4px solid #ffffff; /* Creates a white bottom border */
+  background: linear-gradient(-45deg, #994b01, #f18100, #000000, #1a1a1a); /* Adds gradient effect */
+  animation: gradientAnimation 6s ease infinite; /* Animates gradient */
+  background-size: 300% 300%; /* Enlarges gradient background */
 }
 
-/* Section element styling */
+/* Gradient background animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; } /* Initial position */
+  50% { background-position: 100% 50%; } /* Moves to right */
+  100% { background-position: 0% 50%; } /* Moves back to start */
+}
+
+/* Section styling */
 section {
-  text-align: center; /* Centers the section content */
-  font-size: 20px; /* Font size of text inside the section */
-  padding: 20px; /* Adds spacing inside the section */
-  display: flex; /* Uses flex layout */
-  justify-content: center; /* Horizontally centers content */
-  align-items: center; /* Vertically centers content */
-  margin-bottom: -270px; /* Negative margin pulls section upward */
-  position: absolute; /* Absolutely positioned at the bottom */
-  bottom: 0; /* Sticks section to the bottom of the viewport */
+  text-align: center; /* Centers section content */
+  font-size: 20px; /* Sets font size */
+  padding: 10px; /* Adds space inside section */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  position: absolute; /* Positions section at bottom */
+  bottom: 0; /* Sticks section to viewport bottom */
   width: 100%; /* Full width */
+  margin-bottom: -110px; /* Pulls section upwards */
 }
 
 /* Video background styling */
 #bg-video {
-  width: 100%; /* Full width of the screen */
-  height: 100%; /* Full height of the screen */
-  object-fit: cover; /* Ensures video covers the container */
-  z-index: -1; /* Sends video to the background layer */
-  pointer-events: none; /* Makes video unclickable */
-  position: absolute; /* Allows placement below other elements */
-  margin-top: 600px; /* Pushes video down */
+  width: 100%; /* Full screen width */
+  height: 100%; /* Full screen height */
+  object-fit: cover; /* Fills container */
+  z-index: -1; /* Places video in background */
+  pointer-events: none; /* Prevents interaction */
+  position: absolute; /* Positions below content */
+  margin-top: 600px; /* Pushes video downward */
 }
 
 /* Image positioned at top-left corner */
 .top-left-image {
-  position: absolute; /* Freely positions the image */
-  margin-left: 20px; /* Pushes it slightly from the left edge */
-  margin-top: -5px; /* Pulls it slightly above the top */
-  top: 0; /* Anchored to the top */
-  left: 0; /* Anchored to the left */
-  width: 150px; /* Sets image width */
-  height: auto; /* Maintains image proportions */
+  position: absolute; /* Allows placement anywhere */
+  margin-left: 20px; /* Moves image from left edge */
+  margin-top: -5px; /* Adjusts position slightly */
+  top: 0; /* Anchors to top */
+  left: 0; /* Anchors to left */
+  width: 150px; /* Defines image size */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 110%; /* Makes image circular */
 }
 
-/* Generic video element styling */
+/* Generic video styling */
 video {
-  width: 900px; /* Sets fixed width for the video */
+  width: 900px; /* Sets video width */
 }
 
-/* Container to center a video on the page */
+/* Video container */
 .video-container {
   display: flex; /* Enables flexbox */
-  justify-content: center; /* Horizontally centers the video */
-  align-items: center; /* Vertically centers the video */
+  justify-content: center; /* Centers video */
+  align-items: center; /* Centers vertically */
 }
 
 /* Navigation link styles */
 nav a {
-  text-decoration: none; /* Removes underline from links */
-  margin: 0 15px; /* Adds spacing between links */
-  color: rgba(246, 245, 245, 0.877); /* Off-white text color */
+  text-decoration: none; /* Removes underlines */
+  margin: 0 15px; /* Adds space between links */
+  color: rgba(246, 245, 245, 0.877); /* Light white text */
   font-size: 20px; /* Increases font size */
 }
 
-/* Navigation bar container */
+/* Navigation bar */
 nav {
-  display: flex; /* Flex layout for horizontal links */
-  gap: 10px; /* Space between items */
+  display: flex; /* Uses flexbox for layout */
+  gap: 10px; /* Adds spacing */
   justify-content: center; /* Centers navigation links */
-  margin-top: 10px; /* Adds space above the nav */
+  margin-top: 8%; /* Adds space above navigation */
+  margin-left: 33%; /* Adjusts alignment */
 }
 
-/* Custom button styling */
+/* Styled button */
 .styled-button {
-  background-color: black; /* Black background */
-  color: white; /* White text */
-  padding: 10px 20px; /* Adds padding inside button */
+  background-color: black; /* Sets button background */
+  color: white; /* Sets text color */
+  padding: 10px 20px; /* Adds padding */
   border: 2px solid orange; /* Orange border */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* No underline */
-  font-size: 16px; /* Text size */
+  border-radius: 5px; /* Rounds corners */
+  text-decoration: none; /* Removes underline */
+  font-size: 16px; /* Font size */
   font-weight: bold; /* Bold text */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
-/* Hover effect for custom button */
+/* Hover effect for button */
 .styled-button:hover {
   background-color: orange; /* Changes background on hover */
-  color: black; /* Changes text color on hover */
+  color: black; /* Changes text color */
 }
-
-
 
 
 /* Page 2 body styling */
 .page2 body {
-  background-color: rgb(0, 0, 0); /* Sets a black background */
-  color: white; /* Sets default text color to white */
-  margin: 0; /* Removes default body margin */
-  font-family: Arial, sans-serif; /* Uses Arial font */
+  background-color: rgb(0, 0, 0); /* Sets the background color to black */
+  color: white; /* Sets the default text color to white */
+  margin: 0; /* Removes default margin around the body */
+  font-family: Arial, sans-serif; /* Uses Arial font, with sans-serif as a fallback */
 }
 
 /* Header section on page 2 */
 .page2 header {
-  background-color: rgb(0, 0, 0); /* Matches page background */
-  padding: 50px; /* Adds padding around header content */
-  display: flex; /* Uses flex layout for inner items */
-  justify-content: space-between; /* Spreads content across header */
-  align-items: center; /* Vertically aligns header content */
+  background-color: rgb(0, 0, 0); /* Matches the page background */
+  padding: 50px; /* Adds padding inside the header */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes header content across available space */
+  align-items: center; /* Vertically aligns elements within the header */
 }
 
-/* Main heading inside header */
+/* Main heading inside the header */
 .page2 h1 {
-  color: rgb(244, 126, 0); /* Sets heading color */
+  color: rgb(255, 255, 255); /* Sets the text color to white */
   margin: 0; /* Removes default margin */
-  text-align: center; /* Centers text */
-  flex-grow: 1; /* Allows it to expand in the flex container */
-  margin-right: 20%; /* Adds spacing on the right */
+  text-align: center; /* Centers the heading text */
+  flex-grow: 1; /* Allows it to expand within the flex container */
+  margin-right: 20%; /* Adds spacing to the right of the heading */
 }
 
 /* Header image on the right side */
 .page2 .header-image {
-  position: absolute; /* Places image independently of flow */
-  margin-left: 1100px; /* Pushes image to the right */
-  top: 0; /* Anchors to the top */
-  left: 0; /* Starts from the left */
-  width: 150px; /* Image width */
-  height: auto; /* Maintains aspect ratio */
+  position: absolute; /* Positions the image outside of the normal flow */
+  margin-left: 1100px; /* Pushes the image far to the right */
+  top: 0; /* Aligns the image to the top */
+  left: 0; /* Aligns the image to the left */
+  width: 150px; /* Sets the width of the image */
+  height: auto; /* Ensures the aspect ratio is maintained */
+  border-radius: 110%; /* Rounds the image */
 }
 
-/* Navigation button container inside header */
+/* Navigation button container inside the header */
 .page2 .nav-buttons {
-  display: flex; /* Lays out buttons horizontally */
-  gap: 10px; /* Space between buttons */
+  display: flex; /* Uses flexbox for button layout */
+  gap: 10px; /* Adds space between buttons */
 }
 
-/* Individual nav buttons */
+/* Individual navigation buttons */
 .page2 .nav-buttons button {
-  background-color: rgb(0, 0, 0); /* Button background color */
-  color: rgb(245, 243, 243); /* Button text color */
-  padding: 15px 10px; /* Adds space inside button */
-  border: none; /* No border */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Text size */
+  background-color: rgb(0, 0, 0); /* Sets button background to black */
+  color: rgb(245, 243, 243); /* Sets button text color to off-white */
+  padding: 15px 10px; /* Adds padding inside the button */
+  border: 2px solid orange; /* Adds a solid orange border */
+  cursor: pointer; /* Shows a pointer cursor when hovering */
+  font-size: 16px; /* Sets text size */
   font-weight: bold; /* Makes text bold */
-  border-radius: 5px; /* Rounded button corners */
+  border-radius: 5px; /* Rounds the button corners */
 }
 
-/* Hover effect for nav buttons */
+/* Hover effect for navigation buttons */
 .page2 .nav-buttons button:hover {
-  background-color: orange; /* Background turns orange on hover */
-  color: white; /* Text becomes white on hover */
+  background-color: orange; /* Changes background color to orange when hovered */
+  color: white; /* Changes text color to white when hovered */
 }
 
 /* Thin white line under the header */
 .page2 .header-line {
-  width: 100%; /* Full width */
-  height: 5px; /* Line thickness */
-  background-color: rgb(255, 255, 255); /* White color */
+  width: 100%; /* Stretches the line across the entire width */
+  height: 5px; /* Defines the thickness of the line */
+  background-color: rgb(255, 255, 255); /* Sets the line color to white */
 }
 
 /* Container for video section */
 .page2 .video-container {
-  display: flex; /* Flexbox layout */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  height: 120vh; /* 120% of viewport height */
-  position: relative; /* Allows absolute children inside */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 120vh; /* Sets the height to 120% of the viewport */
+  position: relative; /* Allows child elements to be positioned inside */
 }
 
 /* Background video inside the container */
 .page2 #bg-video {
-  width: 1275px; /* Fixed video width */
-  height: 100%; /* Fills container vertically */
-  border-radius: 10px; /* Rounded corners */
-  object-fit: cover; /* Covers area without distortion */
+  width: 1275px; /* Sets fixed width for the video */
+  height: 100%; /* Expands height to fill the container */
+  border-radius: 10px; /* Rounds the video corners */
+  object-fit: cover; /* Ensures the video covers the entire container */
   margin-top: 0px; /* No top margin */
 }
 
 /* Container for overlaid content on the video */
 .page2 .overlay-content {
-  position: absolute; /* Absolutely positioned inside container */
-  top: 50%; /* Moves down to vertical center */
-  left: 50%; /* Moves right to horizontal center */
-  transform: translate(-50%, -50%); /* Perfect centering */
+  position: absolute; /* Positions content absolutely inside the container */
+  top: 50%; /* Moves it to the vertical center */
+  left: 50%; /* Moves it to the horizontal center */
+  transform: translate(-50%, -50%); /* Precisely centers the content */
   text-align: center; /* Centers text inside */
 }
 
 /* Optional overlay image on top of video */
 .page2 .overlay-image {
-  max-width: 400px; /* Maximum width */
+  max-width: 400px; /* Limits the maximum width */
   height: auto; /* Maintains aspect ratio */
-  margin-bottom: 20px; /* Spacing below image */
-  margin-left: 20px; /* Spacing from left */
+  margin-bottom: 20px; /* Adds spacing below the image */
+  margin-left: 20px; /* Adds space from the left */
 }
 
 /* Semi-transparent text box over video */
 .page2 .text-box {
-  background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
-  color: rgb(255, 255, 255); /* White text */
-  padding: 10px; /* Inner padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 15px; /* Font size */
-  max-width: 500px; /* Limit width */
-  margin-left: 80px; /* Spacing from left */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a black background with transparency */
+  color: rgb(255, 255, 255); /* Sets text color to white */
+  padding: 10px; /* Adds spacing inside */
+  border-radius: 5px; /* Rounds corners */
+  font-size: 15px; /* Defines text size */
+  max-width: 500px; /* Limits the text box width */
+  margin-left: 80px; /* Adds space from the left */
 }
 
 /* Fortnite content container on the right side */
 .page2 .fortnite-container {
-  position: absolute; /* Positioned relative to parent */
-  left: 95%; /* Near right edge */
-  top: 35%; /* Vertical placement */
-  transform: translateY(-50%); /* Center vertically */
-  text-align: center; /* Center content */
+  position: absolute; /* Positions container absolutely */
+  left: 95%; /* Moves it near the right edge */
+  top: 35%; /* Positions it vertically */
+  transform: translateY(-50%); /* Centers it vertically */
+  text-align: center; /* Centers content inside */
 }
 
 /* Fortnite game image */
 .page2 .fortnite-image {
-  max-width: 350px; /* Limits image size */
-  height: auto; /* Keeps aspect ratio */
+  max-width: 350px; /* Limits the image width */
+  height: auto; /* Maintains proportions */
 }
 
 /* Text below Fortnite image */
 .page2 .fortnite-text {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: rgb(255, 255, 255); /* Text color */
-  padding: 10px; /* Spacing inside */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 15px; /* Font size */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent black background */
+  color: rgb(255, 255, 255); /* Sets text color to white */
+  padding: 10px; /* Adds spacing inside */
+  border-radius: 5px; /* Rounds corners */
+  font-size: 15px; /* Defines text size */
   max-width: 300px; /* Limits text box width */
-  margin-top: 10px; /* Space above text */
-  text-align: right; /* Right-aligns text */
-  margin-left: 20px; /* Adds left margin */
+  margin-top: 10px; /* Adds space above text */
+  text-align: right; /* Aligns text to the right */
+  margin-left: 20px; /* Adds space from the left */
 }
 
 /* Minecraft content container on the left side */
 .page2 .minecraft-container {
-  position: absolute; /* Positioned absolutely */
-  left: -70%; /* Far to the left (may be off-screen) */
-  top: 25%; /* Vertical positioning */
-  transform: translateY(-50%); /* Vertically centers */
-  text-align: left; /* Aligns content to the left */
-  margin-left: 15px; /* Adds space from the edge */
+  position: absolute; /* Positions container absolutely */
+  left: -70%; /* Moves it far to the left (possibly off-screen) */
+  top: 25%; /* Positions it vertically */
+  transform: translateY(-50%); /* Centers it vertically */
+  text-align: left; /* Aligns content inside to the left */
+  margin-left: 15px; /* Adds space from the left */
 }
 
 /* Minecraft game image */
 .page2 .minecraft-image {
-  max-width: 350px; /* Maximum width */
+  max-width: 350px; /* Limits the image size */
   height: auto; /* Maintains proportions */
-  margin-left: 100px; /* Offsets image from container */
+  margin-left: 100px; /* Moves image from the edge */
 }
 
 /* Text below Minecraft image */
 .page2 .minecraft-text {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
-  color: rgb(255, 255, 255); /* White text */
-  padding: 10px; /* Padding inside the box */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 15px; /* Font size */
-  max-width: 400px; /* Maximum width */
-  margin-top: 10px; /* Space above text */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a transparent black background */
+  color: rgb(255, 255, 255); /* Sets text color to white */
+  padding: 10px; /* Adds spacing inside the box */
+  border-radius: 5px; /* Rounds corners */
+  font-size: 15px; /* Defines text size */
+  max-width: 400px; /* Limits width */
+  margin-top: 10px; /* Adds space above text */
 }
-
 
 
 /* Page 4 body styling */
 #page-4 body {
-  font-family: Arial, sans-serif; /* Sets font */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
-  background-color: black; /* Background color */
-  color: rgb(231, 127, 9); /* Default text color */
+  font-family: Arial, sans-serif; /* Sets the font family to Arial, with sans-serif as a fallback */
+  margin: 0; /* Removes default margin from the body */
+  padding: 0; /* Removes default padding from the body */
+  background-color: black; /* Sets the page background to black */
+  color: rgb(231, 127, 9); /* Defines the text color as a shade of orange */
 }
 
 /* Heading styling on Page 4 */
 #page-4 h1 {
-  text-size-adjust: 18px; /* Adjusts text size on zoom (not widely supported) */
-  color: rgb(244, 126, 0); /* Header color */
-  margin: 0; /* Removes margin */
-  text-align: center; /* Centers the heading */
-  flex-grow: 1; /* Allows it to grow in flex layout */
+  font-size: 30px; /* Sets the font size of the main heading */
+  color: rgb(255, 255, 255); /* Sets the text color to white */
+  margin: 0; /* Removes default margin */
+  text-align: center; /* Centers the text horizontally */
+  flex-grow: 1; /* Allows the heading to grow within a flex container */
 }
 
 /* Header container styling */
 #page-4 header {
-  text-align: center; /* Center-aligns content */
+  text-align: center; /* Centers the header content */
   padding: 10px 0; /* Adds vertical padding */
-  border-bottom: 10px solid white; /* Thick white border below header */
-  background-color: black; /* Matches page background */
+  border-bottom: 10px solid white; /* Creates a thick white border under the header */
+  display: flex; /* Enables flexible layout for child elements */
+  margin-top: 110px; /* Moves the header down */
+  align-items: center; /* Vertically aligns header items */
+  justify-content: space-between; /* Distributes elements evenly across the header */
+  background: linear-gradient(-45deg, #994b01, #f18100, #000000, #1a1a1a); /* Creates an animated gradient */
+  animation: gradientAnimation 6s ease infinite; /* Animates the gradient background */
+  background-size: 300% 300%; /* Expands gradient for smooth transitions */
+}
+
+/* Keyframe animation for the gradient background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; } /* Starts gradient at left */
+  50% { background-position: 100% 50%; } /* Moves gradient to the right */
+  100% { background-position: 0% 50%; } /* Returns gradient to the left */
 }
 
 /* Fullscreen background video styling */
 #page-4 .background-video {
-  position: absolute; /* Absolutely positioned */
-  top: 0; /* Anchored to top */
-  left: 0; /* Anchored to left */
-  width: 100%; /* Full width */
-  height: 110%; /* Slightly over full height */
-  object-fit: cover; /* Ensures video covers container */
-  z-index: -1; /* Behind all other content */
-  margin-top: 15%; /* Pushes video down slightly */
+  position: absolute; /* Positions the video absolutely */
+  top: 0; /* Anchors the video to the top */
+  left: 0; /* Anchors the video to the left */
+  width: 100%; /* Expands the video width to cover the screen */
+  height: 110%; /* Makes the video slightly taller than the viewport */
+  object-fit: cover; /* Ensures the video covers the entire container */
+  z-index: -1; /* Places the video behind all other elements */
+  margin-top: 15%; /* Pushes the video down slightly */
 }
 
-/* Container for nav buttons */
+/* Container for navigation buttons */
 #page-4 .nav-buttons-container {
-  background-color: black; /* Matches background */
-  text-align: center; /* Center-aligns buttons */
-  padding: 10px 0; /* Vertical padding */
-  z-index: 2; /* Ensures it's above the video */
+  text-align: center; /* Centers navigation buttons */
+  padding: 10px 0; /* Adds vertical spacing */
+  z-index: 2; /* Keeps the buttons above the background video */
 }
 
-/* Individual nav button links */
+/* Individual navigation buttons */
 #page-4 .nav-buttons a {
-  background-color: black; /* Button background */
-  color: white; /* Button text color */
-  text-decoration: none; /* Removes underline */
-  border: 2px solid orange; /* Orange border */
-  padding: 10px 15px; /* Inner spacing */
-  margin: 0 5px; /* Spacing between buttons */
-  font-size: 1rem; /* Sets font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  color: white; /* Sets text color to white */
+  text-decoration: none; /* Removes default underline */
+  border: 2px solid orange; /* Creates an orange border */
+  padding: 10px 15px; /* Adds padding inside the button */
+  margin: 0 5px; /* Adds space between buttons */
+  font-size: 1rem; /* Sets the font size */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  border-radius: 5px; /* Rounds button corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
-/* Hover effect for nav buttons */
+/* Hover effect for navigation buttons */
 #page-4 .nav-buttons a:hover {
-  background-color: orange; /* Button background on hover */
-  color: black; /* Text color on hover */
-  border: none; /* Removes border on hover */
+  background-color: orange; /* Sets button background to orange */
+  color: black; /* Changes text color to black */
+  border: none; /* Removes border */
 }
 
 /* Centers headings below navigation */
 #page-4 .center-heading {
-  text-align: center; /* Center-aligns text */
+  text-align: center; /* Centers text */
   margin-top: 30px; /* Adds top margin */
-  z-index: 1; /* Ensures it's above video */
+  z-index: 1; /* Ensures heading appears above the video */
 }
 
-/* Image centered at the bottom */
+/* Bottom-centered image */
 #page-4 .bottom-image {
-  position: absolute; /* Absolutely positioned */
-  bottom: -250px; /* Positioned below the viewport */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjusts for exact centering */
-  width: 150px; /* Fixed width */
-  z-index: 0; /* Behind other elements */
+  position: absolute; /* Positions image absolutely */
+  bottom: -250px; /* Moves image below the viewport */
+  left: 50%; /* Centers image horizontally */
+  transform: translateX(-50%); /* Ensures precise centering */
+  width: 150px; /* Sets a fixed width */
+  z-index: 0; /* Keeps the image behind other elements */
+  border-radius: 110%; /* Makes the image rounded */
 }
 
-/* Fortnite image on the left side */
+/* Fortnite image styling */
 #page-4 .fortnite-image {
-  position: absolute;
-  top: 83%; /* Positions vertically */
-  left: 5px; /* Left edge of screen */
+  position: absolute; /* Positions the image absolutely */
+  top: 83%; /* Vertically positions it */
+  left: 5px; /* Anchors to the left */
+  transform: translateY(-50%); /* Centers image vertically */
+  width: 300px; /* Sets width */
+  z-index: 0; /* Places behind other overlays */
+}
+
+/* Paragraph for Fortnite image */
+#page-4 .fortnite-paragraph {
+  position: absolute; /* Positions text absolutely */
+  top: 110%; /* Places it below the image */
+  left: 5px; /* Aligns text with the image */
   transform: translateY(-50%); /* Centers vertically */
   width: 300px; /* Sets width */
-  z-index: 0; /* Behind text overlays */
-}
-
-/* Fortnite descriptive text */
-#page-4 .fortnite-paragraph {
-  position: absolute;
-  top: 110%; /* Below the image */
-  left: 5px; /* Aligns with image */
-  transform: translateY(-50%); /* Vertical centering */
-  width: 300px; /* Fixed width */
-  color: white; /* Text color */
-  z-index: 1; /* Above image */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px; /* Inner spacing */
-  border-radius: 10px; /* Rounded corners */
+  color: white; /* Sets text color */
+  z-index: 1; /* Ensures text appears above the image */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  padding: 10px; /* Adds inner spacing */
+  border-radius: 10px; /* Rounds corners */
 }
 
 /* Minecraft image styling */
 #page-4 .minecraft-image {
-  position: absolute;
-  top: 50%; /* Vertical placement */
-  left: 5px; /* Left side */
-  transform: translateY(-50%); /* Vertical centering */
-  width: 300px; /* Image size */
-  z-index: 1; /* Layer above video */
+  position: absolute; /* Positions the image absolutely */
+  top: 50%; /* Vertically centers the image */
+  left: 5px; /* Anchors it to the left */
+  transform: translateY(-50%); /* Adjusts centering */
+  width: 300px; /* Sets width */
+  z-index: 1; /* Ensures the image appears above the video */
 }
 
-/* Minecraft descriptive paragraph */
+/* Paragraph for Minecraft image */
 #page-4 .minecraft-paragraph {
-  position: absolute;
-  top: 47%; /* Slightly above image center */
-  left: calc(40px + 270px); /* Positioned next to the image */
-  transform: translateY(-50%); /* Vertical centering */
-  width: 400px; /* Paragraph width */
-  color: white; /* Text color */
-  z-index: 1; /* Above image */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px; /* Inner padding */
-  border-radius: 10px; /* Rounded edges */
+  position: absolute; /* Positions text absolutely */
+  top: 47%; /* Slightly above the image */
+  left: calc(40px + 270px); /* Positions beside the image */
+  transform: translateY(-50%); /* Centers vertically */
+  width: 400px; /* Sets width */
+  color: white; /* Sets text color */
+  z-index: 1; /* Keeps text above the video */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  padding: 10px; /* Adds inner padding */
+  border-radius: 10px; /* Rounds corners */
 }
 
 /* Call of Duty image positioned on right */
 #page-4 .cod-image {
-  position: absolute;
-  top: 82%; /* Vertical position */
-  right: 5px; /* Align to right edge */
-  transform: translateY(-50%); /* Vertical centering */
-  width: 300px; /* Image width */
-  z-index: 1; /* Layer above video */
+  position: absolute; /* Positions image absolutely */
+  top: 82%; /* Vertically places the image */
+  right: 5px; /* Aligns the image to the right edge */
+  transform: translateY(-50%); /* Centers the image vertically */
+  width: 300px; /* Defines the width of the image */
+  z-index: 1; /* Ensures image appears above background */
 }
 
 /* Paragraph for Call of Duty image */
 #page-4 .cod-paragraph {
-  position: absolute;
-  top: 110%; /* Below image */
-  right: 5px; /* Align with image */
-  transform: translateY(-50%); /* Center vertically */
-  width: 300px; /* Width of paragraph */
-  color: white; /* Text color */
-  z-index: 1; /* Above image */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px; /* Padding inside box */
-  border-radius: 10px; /* Rounded corners */
-  text-align: right; /* Right-aligned text */
+  position: absolute; /* Positions text absolutely */
+  top: 110%; /* Places text below the image */
+  right: 5px; /* Aligns it with the image */
+  transform: translateY(-50%); /* Centers vertically */
+  width: 300px; /* Defines width */
+  color: white; /* Sets text color */
+  z-index: 1; /* Ensures text appears above image */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  padding: 10px; /* Adds spacing inside */
+  border-radius: 10px; /* Rounds corners */
+  text-align: right; /* Aligns text to the right */
 }
 
 /* GTA image on the right */
 #page-4 .gta-image {
-  position: absolute;
-  top: 48%; /* Vertical alignment */
-  right: 5px; /* Right edge */
-  transform: translateY(-50%); /* Center vertically */
-  width: 200px; /* Image size */
-  z-index: 1; /* Layer above video */
+  position: absolute; /* Positions image absolutely */
+  top: 48%; /* Vertically aligns it */
+  right: 5px; /* Aligns the image to the right edge */
+  transform: translateY(-50%); /* Centers it properly */
+  width: 200px; /* Defines image size */
+  z-index: 1; /* Ensures it appears above other layers */
 }
 
 /* Paragraph next to GTA image */
 #page-4 .gta-paragraph {
-  position: absolute;
-  top: 47%; /* Vertically aligned */
-  right: calc(2% + 170px); /* Positioned beside image */
-  transform: translateY(-50%); /* Center vertically */
-  width: 300px; /* Width */
-  color: white; /* Text color */
-  z-index: 1; /* Layer above video */
-  background-color: rgba(0, 0, 0, 0.5); /* Background with transparency */
-  padding: 10px; /* Padding inside box */
-  border-radius: 10px; /* Rounded corners */
-  text-align: left; /* Left-aligned text */
+  position: absolute; /* Positions text absolutely */
+  top: 47%; /* Vertically aligns it */
+  right: calc(2% + 170px); /* Positions it beside the image */
+  transform: translateY(-50%); /* Ensures precise centering */
+  width: 300px; /* Defines width */
+  color: white; /* Sets text color */
+  z-index: 1; /* Ensures text appears above the video */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  padding: 10px; /* Adds inner spacing */
+  border-radius: 10px; /* Rounds corners */
+  text-align: left; /* Aligns text to the left */
 }
+

@@ -3,18 +3,33 @@ body {  /* Base styles for the page */
   color: white;  /* Set text color to white */
   margin: 0;  /* Remove default margin */
   font-family: Arial, sans-serif;  /* Set font family */
+  background: linear-gradient(-45deg, #bc823f, #c28420, #2b0202, #1a1a1a);    /* Gradient background */
+  animation: gradientAnimation 6s ease infinite;    /* Animation for gradient */
+  background-size: 300% 300%;   /* Size of the background */
 }
 
 header {  /* Styles for the header section */
-  background-color: rgb(0, 0, 0);  /* Set header background to black */
-  padding: 0;  /* Remove padding */
+  padding: 9px;  /* Remove padding */
   text-align: center;  /* Center the text */
   position: static;  /* Use default position */
   width: 100%;  /* Make header full width */
+  background: linear-gradient(-45deg, #994b01, #f18100, #000000, #1a1a1a);    /* Gradient background */
+  animation: gradientAnimation 6s ease infinite;    /* Animation for gradient */
+  background-size: 300% 300%;     /* Size of the background */
+  border-bottom: 4px solid white;     /* White border at the bottom */
+  box-shadow: 0px 4px 10px #f18100;     /* Shadow effect */
+  background: #1a1a1a;    /* Fallback color */
+  backdrop-filter: blur(10px);    /* Blur effect */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }    /* Start position */
+  50% { background-position: 100% 50%; }    /* Middle position */
+  100% { background-position: 0% 50%; }    /* End position */
 }
 
 h1 {  /* Style for all h1 headers */
-  color: rgb(244, 126, 0);  /* Set text color to orange */
+  color: rgb(255, 255, 255);  /* Set text color to orange */
   margin: 10px 0;  /* Vertical spacing above and below the header */
 }
 
@@ -45,172 +60,147 @@ h1 {  /* Style for all h1 headers */
   color: black;  /* Change text color to black */
 }
 
-.header-line {  /* White line under header */
-  width: 100%;  /* Full width */
-  height: 5px;  /* Thickness of the line */
-  background-color: white;  /* White color */
-  margin: 15px 0;  /* Vertical spacing */
-}
-
-#background-video,  /* Background video styling */
-.image-scroll {  /* Image scroll section uses same styling */
-  width: 1270px;  /* Set width */
-  height: 450px;  /* Set height */
-  border-radius: 10px;  /* Rounded corners */
-  object-fit: cover;  /* Cover element without distortion */
-  display: block;  /* Display as block element */
-  margin: 0 auto;  /* Center horizontally */
-}
-
 .image-container {  /* Container for top center image */
   position: absolute;  /* Position relative to nearest positioned ancestor */
-  top: 130px;  /* Distance from top */
-  left: 50%;  /* Center horizontally */
+  margin-top: -17%;  /* Distance from top */
+  left: 70%;  /* Center horizontally */
   transform: translateX(-50%);  /* Perfect horizontal centering */
   z-index: 2;  /* Layer above other content */
 }
 
 .image-container img {  /* Image styling inside container */
-  width: 200px;  /* Fixed width */
+  width: 120px;  /* Fixed width */
   height: auto;  /* Maintain aspect ratio */
-  border-radius: 10px;  /* Rounded corners */
+  border-radius: 110%;  /* Circular shape */
+  margin-top: 70%;    /* Space above image */
 }
 
-.among-us-container {  /* Among Us section positioning */
+.among-us-overlay {  /* Among Us section positioning */
   position: absolute;  /* Absolute positioning */
   top: 350px;  /* Distance from top */
   left: 61%;  /* Position from the left side */
   transform: translateX(-50%);  /* Center based on element's width */
   z-index: 2;  /* Layer on top */
+  margin-left: -20%;  /* Move to left */
 }
 
-.among-us-container img {  /* Image in Among Us container */
-  width: 200px;  /* Fixed width */
+.among-us-overlay img {  /* Image in Among Us container */
+  width: 350px;  /* Fixed width */
   margin-left: 2%;  /* Small left margin */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
+  margin-top: 135%;     /* Space above image */
+  margin-left: -98%;    /* Center image */
 }
 
-.among-us-container p {  /* Text below Among Us image */
-  text-align: center;  /* Center text */
-  color: white;  /* White text */
-  margin-top: 10px;  /* Space above paragraph */
-  font-size: 16px;  /* Font size */
-  margin-right: 50%;  /* Push text leftward */
-}
-
-.image-scroll {  /* Scrollable image background section */
-  background-image: url('About Website .png');  /* Background image */
-  background-size: cover;  /* Fully cover container */
-  background-position: center;  /* Center image */
-  padding: 50px 0;  /* Vertical padding */
-  text-align: center;  /* Center content */
+.among-us-overlay p {  /* Text below Among Us image */
+  position: absolute;
+  top: 80%; /* Slightly above image center */
+  left: calc(40px + 270px); /* Positioned next to the image */
+  transform: translateY(-50%); /* Vertical centering */
+  width: 400px; /* Paragraph width */
+  color: white; /* Text color */
+  z-index: 1; /* Above image */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Inner padding */
+  border-radius: 10px; /* Rounded edges */
+  text-align: left;   /* Align text to left */
+  margin-left: -80%;  /* Move to left */
 }
 
 .among-us-video {  /* Among Us video styling */
   display: block;  /* Block element */
   margin: 0 auto;  /* Center horizontally */
-  width: 500px;  /* Fixed width */
+  width: 375px;  /* Fixed width */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
-  margin-top: 70px;  /* Space above video */
+  margin-top: 49%;  /* Space above video */
+  margin-left: 67%;   /* Move to left */
 }
 
 .roblox-overlay {  /* Roblox overlay section */
   position: absolute;  /* Positioned relative to page */
   top: 130px;  /* Distance from top */
   right: 80%;  /* Push to left */
-  z-index: 3;  /* Appear above most elements */
+  z-index: -2;  /* Appear above most elements */
   text-align: center;  /* Center text */
 }
 
 .roblox-overlay img {  /* Roblox image styling */
-  width: 200px;  /* Fixed width */
+  width: 350px;  /* Fixed width */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
+  margin-left: 45%;    /* Center image */
+  margin-top: 15%;    /* Space above image */
 }
 
 .roblox-overlay p {  /* Roblox description text */
-  color: white;  /* White text */
-  font-size: 16px;  /* Font size */
-  margin-top: 10px;  /* Top spacing */
+  position: absolute;
+  top: 50%; /* Slightly above image center */
+  left: calc(40px + 270px); /* Positioned next to the image */
+  transform: translateY(-50%); /* Vertical centering */
+  width: 400px; /* Paragraph width */
+  color: white; /* Text color */
+  z-index: 1; /* Above image */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Inner padding */
+  border-radius: 10px; /* Rounded edges */
+  text-align: left;    /* Move to left */
+  margin-left: 65%;    /* Move to left */
 }
 
 .roblox-video {  /* Roblox video styles */
-  width: 450px;  /* Fixed width */
+  width: 375px;  /* Fixed width */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
   display: block;  /* Display as block element */
-  margin-right: -400px;  /* Pull video to left */
-  margin-top: 80px;  /* Space above video */
+  margin-top: -52%;  /* Space above video */
+  margin-left: 265%;  /* Move to left */
 }
+
 
 .fortnite-overlay {  /* Fortnite overlay section */
   position: absolute;  /* Absolute positioning */
   top: 130px;  /* Distance from top */
-  left: 80%;  /* Push to the right */
+  right: 80%;  /* Push to the right */
   z-index: 3;  /* Appear above background */
   text-align: center;  /* Center text */
 }
 
 .fortnite-overlay img {  /* Fortnite image styling */
-  width: 200px;  /* Fixed width */
+  width: 350px;  /* Fixed width */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
+  margin-top: 85%;     /* Space above image */
+  margin-left: 40%;    /* Center image */
 }
 
 .fortnite-overlay p {  /* Fortnite paragraph */
-  color: white;  /* White text */
-  font-size: 16px;  /* Font size */
-  margin-top: 10px;  /* Margin above text */
+  position: absolute;  /* Absolute positioning */
+  top: 75%; /* Slightly above image center */
+  left: calc(40px + 270px); /* Positioned next to the image */
+  transform: translateY(-50%); /* Vertical centering */
+  width: 400px; /* Paragraph width */
+  color: white; /* Text color */
+  z-index: 1; /* Above image */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Inner padding */
+  border-radius: 10px; /* Rounded edges */
+  text-align: left;    /* Align text to left */
+  margin-left: 55%;   /* Move to left */
 }
 
 .fortnite-video {  /* Fortnite video styles */
-  width: 400px;  /* Width */
+  width: 375px;  /* Width */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners */
   display: block;  /* Block display */
-  margin-left: -200px;  /* Move to left */
+  margin-left: 260%;  /* Move to left */
+  margin-top: -60%;   /* Space above video */
 }
 
-.cod-overlay {  /* Call of Duty overlay section */
-  position: absolute;  /* Absolute position on page */
-  top: 160%;  /* Position lower on page */
-  margin-right: 950px;  /* Pull toward left */
-  transform: translateY(-50%);  /* Adjust vertical alignment */
-  text-align: left;  /* Align text to the left */
-}
-
-.cod-overlay img {  /* COD image styling */
-  width: 300px;  /* Width of image */
-  height: auto;  /* Maintain aspect ratio */
-  border-radius: 10px;  /* Rounded corners */
-  display: block;  /* Display as block */
-}
-
-.cod-overlay p {  /* COD description */
-  color: rgb(255, 255, 255);  /* White text */
-  font-size: 15px;  /* Font size */
-  margin-top: 10px;  /* Top spacing */
-}
-
-.fall-guys-overlay {  /* Fall Guys overlay section */
-  position: absolute;  /* Absolute position */
-  top: 158%;  /* Place vertically */
-  margin-left: 950px;  /* Push to right side */
-  transform: translateY(-50%);  /* Vertically center */
-  text-align: right;  /* Align text to the right */
-}
-
-.fall-guys-overlay img {  /* Fall Guys image styles */
-  width: 300px;  /* Fixed width */
-  height: auto;  /* Maintain aspect ratio */
-  border-radius: 10px;  /* Rounded corners */
-  display: block;  /* Display block */
-}
-
-.fall-guys-overlay p {  /* Fall Guys text paragraph */
-  color: rgb(255, 255, 255);  /* White text */
-  font-size: 15px;  /* Font size */
-  margin-top: 10px;  /* Margin above paragraph */
+.section {
+  background-color: #232323;    /* Dark background */
+  border-bottom: 4px solid #994b01;   /* Orange border */
+  border-top: 4px solid #994b01;    /* Orange border */
 }
